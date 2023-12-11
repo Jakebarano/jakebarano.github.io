@@ -6,7 +6,7 @@
 
 
 ## Introduction
-For the past couple of weeks Ben Stone [@Flowslikelightning](https://github.com/FlowLikeLightning), and myself have been working on An AI buddy that utilizes a Flocking Behavioral Technique and Astar search algorithm to create a AI buddy that follows the player and takes direction from player input. The project so far has been difficult at times and enjoyable at others, as of writing this, I can confidently say we have created a good Prototype that has potential for being well optimized and built upon in the future to create a robust AI companion.
+For the past couple of weeks Ben Stone ([@Flowslikelightning](https://github.com/FlowLikeLightning)), and myself have been working on An AI buddy that utilizes a Flocking Behavioral Technique and Astar search algorithm to create a AI buddy that follows the player and takes direction from player input. The project so far has been difficult at times and enjoyable at others, as of writing this, I can confidently say we have created a good Prototype that has potential for being well optimized and built upon in the future to create a robust AI companion.
 
 ## Techniques
 Here are Explainations of the techniques used in our project, Flocking will be covered in a further depth since it was my main focus while providing support to Ben with the much more difficult Astar.
@@ -17,10 +17,13 @@ The Flocking behavior implemented in this project is based on the general flocki
 
 > #### Alignment Force
 
+`      allignmentForce += player.GetComponent<Rigidbody>().velocity;
+        allignmentForce /= neighborhood.Count + 1;
+        allignmentForce = allignmentForce.normalized;`
 
 > #### Cohesion Force
 
 > #### Seperation Force
 
-
+a
 ### Astar Algorithm
