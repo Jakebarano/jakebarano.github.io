@@ -17,14 +17,14 @@ The Flocking behavior implemented in this project is based on the general flocki
 
 > #### Alignment Force
 
-<code>    
+```
 private void AllignmentCalc(Collider col)
     {
         allignmentForce += player.GetComponent<Rigidbody>().velocity;
         allignmentForce /= neighborhood.Count + 1;
         allignmentForce = allignmentForce.normalized;
     }
-<code>
+```
 
 > #### Cohesion Force
 
