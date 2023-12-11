@@ -24,7 +24,7 @@ private void AllignmentCalc(Collider col)
         allignmentForce /= neighborhood.Count + 1;
         allignmentForce = allignmentForce.normalized;
     }
-</code>
+<code>
 
 > #### Cohesion Force
 
