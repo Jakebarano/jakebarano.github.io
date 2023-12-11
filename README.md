@@ -17,7 +17,7 @@ The Flocking behavior implemented in this project is based on the general flocki
 
 > #### Alignment Force
 
-```
+```c#
 private void AllignmentCalc(Collider col)
     {
         allignmentForce += player.GetComponent<Rigidbody>().velocity;
