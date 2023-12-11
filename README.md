@@ -1,6 +1,6 @@
 <h6> jakebarano.github.io </h6>
 
-# Dev Blog 1
+# Dev Blog 1 - 12/11/2023
 
 ## Game AI Final Blog Post - My Perspective
 
@@ -17,13 +17,17 @@ The Flocking behavior implemented in this project is based on the general flocki
 
 > #### Alignment Force
 
-`      allignmentForce += player.GetComponent<Rigidbody>().velocity;
+<code>    
+private void AllignmentCalc(Collider col)
+    {
+        allignmentForce += player.GetComponent<Rigidbody>().velocity;
         allignmentForce /= neighborhood.Count + 1;
-        allignmentForce = allignmentForce.normalized;`
+        allignmentForce = allignmentForce.normalized;
+    }
+</code>
 
 > #### Cohesion Force
 
 > #### Seperation Force
 
-a
 ### Astar Algorithm
