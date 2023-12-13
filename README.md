@@ -53,13 +53,13 @@ necessary parts include:
 - A camefrom array - used to collect the best neighbors for a given path.
 - visited array - used to mark all neighbors not being used.
 
-(Each component is being quantized and dequantized as necessary).
 The general step by step of Astar is as follows:
+(Each component is being quantized and dequantized as necessary).
 
- 1. add start position to frontier.
- 2. get available neighbor positions of start position.
+ 1. Add start position to frontier.
+ 2. Get available neighbor positions of start position.
  3. Add available neighbors to frontier.
- 4. compare distance costs.
+ 4. Compare distance costs.
  ```c#
  Vector3Int minPos = new Vector3Int();
 float minDist = float.MaxValue;
@@ -73,10 +73,20 @@ foreach (var pos in frontier)
 }
 return minPos;
  ```
- 5. added best neighbor to camefrom array.
+ 5. Added best neighbor to camefrom array.
  6. Mark start and neighbors as visited, and move frontier to best neighbor.
- 7. repeat until goal position is added.
- 8. organize camefrom array and return the path needed.
+ 7. Repeat until goal position is added.
+ 8. Organize camefrom array and return the path needed.
 
  This is a very basic explination of a general Astar algorithm, in our implementation we utilized a manhattan distance between the goal position picked by the player, and kept track of the distance compared to the manhattan distance as part of our heuristic to added the best neighbor postions to create the path. so the process in a Unity Update Function is to get the position clicked by the player, create a path, a direction vector is then calculated based on the path, and force is added to the AI buddy and velocity pushes the buddy towards the selected point.
+
+## Values and Suitable Platforms
+
+The values of these techniques lies in their functionality, for games like League of Legends, and DOTA, Flocking and Astar algorithms are used by the Minion AI in order to navigate and attack the nearest Towers and Defenses. When utilized in contexts such as ours, where the player controls the AI to an extent, these Techniques when built and optimized to the fullest can provide seamless and smooth feedback to the player and create the sense of the control that the developer wants to provide to players in the game, that can be tuned based on the game genre.
+
+Most platforms like desktops, laptops, and consoles can handle these techniques well, even most phones, the general downsides to these techniques are:
+
+- Depth of implementation - The more limitations, and logic checks these techniques perform can severely limit performace on platforms with less bandwith like phones, tablets, and consoles.
+- Scale - This goes hand in hand with Depth of implementation since the number of things being affected by these calculations can use a lot of memory and space during high usage times.
+- Optimization - If the calculations and functions are not optimized they can easily bog down the performance of the platform with only a couple agents interacting, this is why optimization is important in later stages especially in games with so many other systems working at the same time.
 
