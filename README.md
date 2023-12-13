@@ -30,8 +30,9 @@ private void AllignmentCalc(Collider col)
 
 > #### Cohesion Force
 
-Cohesion is similar to Alignment force, however rather than focus on keeping agents in a uniform direction, the use of cohesion force is to keep the agents in a group by applying a force that pushes them towards the center of the group which is calculated by iterating through the neighborhood, adding together all the positions, 'posSum += neighborhood[i].transform.position;' and then dividing that result by the number of agents in the neighborhood 'PosCenter = posSum / (neighborhood.Count);'. You then take the center position vector and subtract it from the current agent's position to create a directional vector towards the center position. Again this value is normalized to create a unit measure and the cohesion force is updated to this value.
+Cohesion is similar to Alignment force, however rather than focus on keeping agents in a uniform direction, the use of cohesion force is to keep the agents in a group by applying a force that pushes them towards the center of the group which is calculated by iterating through the neighborhood, adding together all the positions, <code>posSum += neighborhood[i].transform.position;</code> and then dividing that result by the number of agents in the neighborhood <code>PosCenter = posSum / (neighborhood.Count);</code>. You then take the center position vector and subtract it from the current agent's position to create a directional vector towards the center position. Again this value is normalized to create a unit measure and the cohesion force is updated to this value.
 
 > #### Seperation Force
+
 
 ### Astar Algorithm
